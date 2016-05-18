@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(event) {
-    var test = document.getElementById('result');
+    var outputText = document.getElementById('result');
     chrome.storage.sync.get({
         APIURL: "http://l.daknob.net",
     }, function(items) {
@@ -20,8 +20,12 @@ document.addEventListener('DOMContentLoaded', function(event) {
                 dataType: 'json',
                 success: function(data) {
                     console.log(APIURL)
-                    test.textContent = data["link"];
-
+                    outputText.textContent = data["link"];
+                    document.getElementById('copy-button').style.display = 'block';
+                    new Clipboard('#copy-button');
+                },
+                error: function(){
+                    outputText.textContent = "Server Error";
                 }
             });
         });

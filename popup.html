@@ -2,9 +2,12 @@
   <head>
     <title>ShorTor</title>
     <script src="popup.js"></script>
+    <script src="clipboard.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="popup.css">
   </head>
   <body>
-      <h1 id="result">ShorTor</h1>
+      <h1 id="result" data-clipboard-target="#result">ShorTor</h1>
+      <button class="button" id="copy-button" data-clipboard-target="#result">Copy</button>
   </body>
 </html>

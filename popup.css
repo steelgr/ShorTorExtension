@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400");
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+body{
+    background-color: #efefef;
+    white-space: nowrap;
+}
+#copy-button{
+    display: none;
+}
